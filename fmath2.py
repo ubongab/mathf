@@ -140,10 +140,11 @@ def main():
         def solve_eqn(eqn1, eqn2, eqn3):
             Ax = np.array([eqn1[0],eqn2[0],eqn3[0]])
             constants = [eqn1[1][0], eqn2[1][0], eqn3[1][0]]
+            constants_display = [[eqn1[1][0]], [eqn2[1][0]], [eqn3[1][0]]]
             b = np.array(constants)
             soln = np.linalg.solve(Ax, b)
             # st.write(b)
-            st.write(mat2latex(Ax), mat2latex(['a','b','c']), '=', b)
+            st.write(mat2latex(Ax), mat2latex(['a','b','c']), '=', mat2latex(constants_display))
             # st.write(r'$\begin{bmatrix}11\\9\\2\end{bmatrix}$')
             return soln
 
