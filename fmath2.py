@@ -3,16 +3,10 @@ import cmath
 import streamlit as st
 import streamlit.web.cli as stcli
 from streamlit import runtime
-import pandas as pd
 import numpy as np
-import seaborn as sns
 import matplotlib.pyplot as plt
-import statsmodels.api as sm
-from statsmodels.tools.eval_measures import rmse
-from scipy import stats
-# from sklearn.metrics import mean_squared_error
 
-st.title('Unit 6: Further Maths Assignment 2 - Solutions')
+st.title('FMath A2 - Solution')
 
 # Load dataset
 data = {
@@ -60,17 +54,7 @@ def main():
     
     MAX_LEN = len(dataset['V']) + 1
     data = st.sidebar.selectbox('Select Dataset', range(1,MAX_LEN))
-    # y2023_24A = {1:"Holli - Euan", 2:"Subhaan - Will", 3:"Bobby- Hasan",4:"Luke - Dominic", 5:"James - Mo",
-    #              6:"Kian - Navdeep", 7:"Owen", 8:"Lydia", 9:"Ibraheem", 10:"Matthew", 11:"Jayden", 12:"Othniel"}
-    # y2023_24B = {1:"Isaac - Alfie",2:"Daniel C - Karandeep",3:"Harshpreet - Vishav",4:"Ethan - Kaif",5:"Henry - Oliver",
-    #          6:"Emmanuel - Kwesi", 7:"Taran",8:"Zahid",9:"Daniel K", 10:"Adam",11:"Matin",12:"Jamie"}
-    # st.sidebar.write(y2023_24B)
-    # st.sidebar.write("Task Breakdown: ",""" \nP3 -> 1,2 
-    #                  \nM3 -> 3,4 
-    #                  \nP4 -> 5,6
-    #                  \nM4 -> 7,8
-    #                  \nD2 -> 9,10,11""")
-    # st.sidebar.write(y2023_24A)
+    
     V = dataset['V'][data-1]
     X = dataset['X'][data-1]
     Y = dataset['Y'][data-1]
