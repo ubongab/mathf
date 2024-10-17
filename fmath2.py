@@ -184,7 +184,7 @@ def main():
         st.write(f"6ai) $X_plus_Y_polar = {Xr_i:.2f}<{Xtheta_i*180/np.pi:.2f}$")
         st.write(f"6bi) $Y_minus_X_polar = {Yr_i:.2f}<{Ytheta_i*180/np.pi:.2f}$")
 
-        st.set_option('deprecation.showPyplotGlobalUse', False)
+        # st.set_option('deprecation.showPyplotGlobalUse', False)
         plt.plot(q5a.real, q5a.imag, 'o')
         plt.plot(q5b.real, q5b.imag, 's')
         plt.text(q5a.real+0.01,q5a.imag-0.1,f"Q5a {q5a.real,q5a.imag}", color="g")
