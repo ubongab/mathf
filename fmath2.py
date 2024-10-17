@@ -152,6 +152,7 @@ def main():
 
             xyz = solve_eqn(eqn1[data-1],eqn2[data-1], eqn3[data-1])
             st.write(f"a = {round(xyz[0],1)} , b = {round(xyz[1],1)} , c = {round(xyz[2],1)}")
+        solve_crammars_rule(eqn1, eqn2, eqn3)
 
     with st.expander("Question 5,6,7,8 ", expanded =True):
         st.subheader("Question 5,6,7,8 Complex Numbers ")
